@@ -176,3 +176,20 @@ Thu Apr 30 08:36:40 PM UTC 2026:
  tests:  4|7
 total_score: 5/60
 b990bb4
+Thu Apr 30 08:40:48 PM UTC 2026: 
+ treemap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:64:12: error: implicit declaration of function ‘lower_than’ [-Wimplicit-function-declaration]
+   64 |         if(lower_than(aux->pair->key, key)) == 1 aux->left;
+      |            ^~~~~~~~~~
+treemap.c:64:45: error: expected expression before ‘==’ token
+   64 |         if(lower_than(aux->pair->key, key)) == 1 aux->left;
+      |                                             ^~
+treemap.c:65:17: error: statement with no effect [-Werror=unused-value]
+   65 |         else aux->right;
+      |              ~~~^~~~~~~
+cc1: all warnings being treated as errors
+526d6a2

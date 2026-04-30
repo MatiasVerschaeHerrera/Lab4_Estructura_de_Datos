@@ -199,3 +199,22 @@ Thu Apr 30 08:42:11 PM UTC 2026:
  tests:  4|7
 total_score: 5/60
 d626850
+Thu Apr 30 08:46:57 PM UTC 2026: 
+ treemap.c | 14 ++++++++------
+ 1 file changed, 8 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:70:9: error: unknown type name ‘esle’
+   70 |         esle aux = uax->right;
+      |         ^~~~
+treemap.c:70:20: error: ‘uax’ undeclared (first use in this function); did you mean ‘aux’?
+   70 |         esle aux = uax->right;
+      |                    ^~~
+      |                    aux
+treemap.c:70:20: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:70:14: error: unused variable ‘aux’ [-Werror=unused-variable]
+   70 |         esle aux = uax->right;
+      |              ^~~
+cc1: all warnings being treated as errors
+a18ce88

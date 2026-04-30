@@ -69,7 +69,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         }
         else aux = aux->right;
     }
-return tree->current->pair;
+return NULL;
 }
 
 // 3. Implemente la función void insertTreeMap(TreeMap * tree, void* key, void * value). 

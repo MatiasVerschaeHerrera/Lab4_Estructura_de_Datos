@@ -127,3 +127,25 @@ treemap.c:69:5: error: control reaches end of non-void function [-Werror=return-
       |     ^
 cc1: all warnings being treated as errors
 69dfb22
+Thu Apr 30 08:30:58 PM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:66:9: error: expected ‘}’ before ‘else’
+   66 |         else aux = aux->right;
+      |         ^~~~
+treemap.c: At top level:
+treemap.c:70:1: error: expected identifier or ‘(’ before ‘return’
+   70 | return tree->current->Pair;
+      | ^~~~~~
+treemap.c:71:1: error: expected identifier or ‘(’ before ‘}’ token
+   71 | }
+      | ^
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:69:5: error: control reaches end of non-void function [-Werror=return-type]
+   69 |     }
+      |     ^
+cc1: all warnings being treated as errors
+0eb334f

@@ -47,7 +47,7 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     newMap->root = NULL;
     newMap->current = NULL;
     newMap->lower_than = lower_than;
-    return newMap
+    return newMap;
 }
 
 // 2. Implemente la función Pair* searchTreeMap(TreeMap* tree, void* key), 

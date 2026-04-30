@@ -258,3 +258,31 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
       |     ^~~~
 cc1: all warnings being treated as errors
 1f64381
+Thu Apr 30 08:57:58 PM UTC 2026: 
+ treemap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:90:5: error: unknown type name ‘treeNode’; did you mean ‘TreeNode’?
+   90 |     treeNode* newNode = createTreeNode(key, value);
+      |     ^~~~~~~~
+      |     TreeNode
+treemap.c:90:25: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Wincompatible-pointer-types]
+   90 |     treeNode* newNode = createTreeNode(key, value);
+      |                         ^~~~~~~~~~~~~~
+treemap.c:91:9: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   91 |     aux = newNode;
+      |         ^
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c: At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+e3608f0

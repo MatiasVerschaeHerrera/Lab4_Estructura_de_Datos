@@ -88,6 +88,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         }
         else aux = aux->right;
     aux = createTreeNode(key, value);
+        
 }
 
 // 4. Implemente la función TreeNode * minimum(TreeNode * x). 

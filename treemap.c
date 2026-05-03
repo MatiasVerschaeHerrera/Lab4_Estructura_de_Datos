@@ -180,7 +180,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             hijoMinimo->parent = padreMinimo;
         }
         free(minimo);
-        free(node);
     }
 }
 

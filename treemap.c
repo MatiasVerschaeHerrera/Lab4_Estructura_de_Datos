@@ -212,10 +212,14 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     else{
         TreeNode* aux = tree->current->parent;
-        TreeNode* aux2;
-        aux2 = minimum(aux);
+        TreeNode* aux2 = minimum(aux);
+        TreeNode* aux3;
         while(aux != NULL){
-            if(minimum(aux)->pair->value < aux2->pair->value) aux2 = aux;
+            aux3 = aux;
+            while(aux3->right != NULL){
+                if(aux3->pair->value > aux2->pair->value) aux2 = aux;
+                aux3 = aux3->right;
+            }
             aux = aux->parent;
         }
         return aux2->pair;

@@ -236,7 +236,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
     Pair* aux = searchTreeMap(tree, key);
     if(aux != NULL) return aux;
-
+    free(aux);
+    
     TreeNode* aux2 = tree->root;
     TreeNode* ub_node = NULL;
     while(aux2 != NULL){
@@ -246,6 +247,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         }
         else aux2 = aux2->right;
     }
+    free(aux2);
     if(ub_node == NULL) return NULL;
     return ub_node->pair;
 }

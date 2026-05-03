@@ -200,6 +200,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 Pair * firstTreeMap(TreeMap * tree) {
     if(tree == NULL || tree->root == NULL) return NULL;
     TreeNode* minimo = minimum(tree->root);
+    tree->current = minimo;
     return minimo->pair;
 }
 
@@ -210,14 +211,13 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimo;
         return minimo->pair;
     }
-    else{
-        TreeNode* aux = tree->current;
-        while(aux->parent != NULL && aux == aux->parent->right){
-            aux = aux->parent;
-        }
-        tree->current = aux;
-        return aux->pair;
+    
+    TreeNode* aux = tree->current;
+    while(aux->parent != NULL && aux == aux->parent->right){
+        aux = aux->parent;
     }
+    tree->current = aux->parent;
+    return aux->pair;
 }
 
 // 7. La función Pair* upperBound(TreeMap* tree, void* key) retorna el Pair con clave igual a key. 

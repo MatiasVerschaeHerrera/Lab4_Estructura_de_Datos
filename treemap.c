@@ -100,7 +100,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     }
     else tree->current->right = aux;
     tree->current = aux;
-    free(aux);
 }
 
 // 4. Implemente la función TreeNode * minimum(TreeNode * x). 

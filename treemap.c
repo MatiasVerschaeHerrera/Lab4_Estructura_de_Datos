@@ -198,13 +198,13 @@ void eraseTreeMap(TreeMap * tree, void* key){
 // Recuerde actualizar este puntero.
 
 Pair * firstTreeMap(TreeMap * tree) {
-    if(tree == NULL || tree->root == NULL) return;
+    if(tree == NULL || tree->root == NULL) return NULL;
     TreeNode* minimo = minimum(tree->root);
     return minimo->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    if(tree == NULL || tree->root == NULL) return;
+    if(tree == NULL || tree->root == NULL) return NULL;
     TreeNode* minimo = minimum(tree->current);
     tree->current = minimo;
     return minimo->pair;

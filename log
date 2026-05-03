@@ -502,3 +502,20 @@ Sun May  3 01:02:22 AM UTC 2026:
  tests:  15|4
 total_score: 25/60
 b1b322a
+Sun May  3 01:06:19 AM UTC 2026: 
+ treemap.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:135:38: error: ‘TreeNode’ has no member named ‘root’
+  135 |         if(node->parent == NULL) node->root == NULL;
+      |                                      ^~
+treemap.c:136:65: error: statement with no effect [-Werror=unused-value]
+  136 |         else if(node->parent->left  == node) node->parent->left == NULL;
+      |                                                                 ^
+treemap.c:137:34: error: statement with no effect [-Werror=unused-value]
+  137 |         else node->parent->right == NULL;
+      |                                  ^
+cc1: all warnings being treated as errors
+4c2f874

@@ -238,13 +238,16 @@ Pair * upperBound(TreeMap * tree, void* key) {
     if(aux != NULL) return aux;
 
     TreeNode* aux2 = tree->root;
+    TreeNode* ub_node = NULL;
     while(aux2 != NULL){
         if(tree->lower_than(key, aux2->pair->key)){
+            ub_node = aux2;
             aux2 = aux2->left;
         }
         else aux2 = aux2->right;
     }
-    return aux2->pair;
+    if(ub_node == NULL) return NULL;
+    return ub_node->pair;
 }
 
 

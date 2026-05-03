@@ -147,7 +147,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     // caso 3
     else{
-        TreeNode* minimo = minimun(node->right);
+        TreeNode* minimo = minimum(node->right);
         node->key = minimo->key;
         node->value = minimo->value;
 

@@ -771,3 +771,14 @@ Sun May  3 02:51:33 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 4e44514
+Sun May  3 02:52:26 PM UTC 2026: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:221:23: error: statement with no effect [-Werror=unused-value]
+  221 |         tree->current == NULL;
+      |                       ^
+cc1: all warnings being treated as errors
+999a265

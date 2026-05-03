@@ -647,3 +647,17 @@ treemap.c:214:15: note: ‘aux2’ was declared here
       |               ^~~~
 cc1: all warnings being treated as errors
 3bc6fed
+Sun May  3 01:44:34 AM UTC 2026: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:222:20: error: ‘aux2’ may be used uninitialized [-Werror=maybe-uninitialized]
+  222 |         return aux2->pair;
+      |                ~~~~^~~~~~
+treemap.c:215:19: note: ‘aux2’ was declared here
+  215 |         TreeNode* aux2;
+      |                   ^~~~
+cc1: all warnings being treated as errors
+21ad408

@@ -210,15 +210,17 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = minimo;
         return minimo->pair;
     }
-    TreeNode* aux = tree->current->parent;
-    TreeNode* aux2;
-    while(aux != NULL){
-        if(aux2 == NULL) aux2 = minimum(aux);
-        else{
-            if(minimum(aux)->pair->value < aux2->pair->value) aux2 = aux;
+    else{
+        TreeNode* aux = tree->current->parent;
+        TreeNode* aux2;
+        while(aux != NULL){
+            if(aux2 == NULL) aux2 = minimum(aux);
+            else{
+                if(minimum(aux)->pair->value < aux2->pair->value) aux2 = aux;
+            }
         }
+        return aux2->pair;
     }
-    return aux2->pair;
 }
 
 // 7. La función Pair* upperBound(TreeMap* tree, void* key) retorna el Pair con clave igual a key. 

@@ -205,9 +205,9 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
     if(tree == NULL || tree->root == NULL) return NULL;
-    TreeNode* siguiente = tree->current->right;
-    tree->current = siguiente;
-    return siguiente->pair;
+    TreeNode* minimo = minimum(tree->current->right);
+    tree->current = minimo;
+    return minimo->pair;
 }
 
 // 7. La función Pair* upperBound(TreeMap* tree, void* key) retorna el Pair con clave igual a key. 

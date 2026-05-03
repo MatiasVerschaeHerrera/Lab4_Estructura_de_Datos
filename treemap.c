@@ -144,11 +144,26 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         hijo->parent = node->parent;
         node = NULL;
     }
-    /*else{
-        TreeNode* minimo = minimun(node->right);
 
-        
-    }*/
+    // caso 3
+    else{
+        TreeNode* minimo = minimun(node->right);
+        node->key = minimo->key;
+        node->value = minimo->value;
+
+        TreeNode* padreMinimo = minimo->parent;
+        TreeNode* hijoMinimo = minimo->right;
+
+        if(padreMinimo->left == minimo){
+            padreMinimo->left = hijoMinimo;
+        }
+        else padreMinimo->right = hijoMinimo;
+
+        if(hijoMinimo != NULL){
+            hijoMinimo->parent = padreMinimo
+        }
+        free(minimo);
+    }
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

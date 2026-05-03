@@ -422,3 +422,33 @@ Sun May  3 12:47:00 AM UTC 2026:
  tests:  15|4
 total_score: 25/60
 fb22b69
+Sun May  3 12:59:52 AM UTC 2026: 
+ treemap.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:150:28: error: implicit declaration of function ‘minimun’; did you mean ‘minimum’? [-Wimplicit-function-declaration]
+  150 |         TreeNode* minimo = minimun(node->right);
+      |                            ^~~~~~~
+      |                            minimum
+treemap.c:150:28: error: initialization of ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+treemap.c:151:13: error: ‘TreeNode’ has no member named ‘key’
+  151 |         node->key = minimo->key;
+      |             ^~
+treemap.c:151:27: error: ‘TreeNode’ has no member named ‘key’
+  151 |         node->key = minimo->key;
+      |                           ^~
+treemap.c:152:13: error: ‘TreeNode’ has no member named ‘value’
+  152 |         node->value = minimo->value;
+      |             ^~
+treemap.c:152:29: error: ‘TreeNode’ has no member named ‘value’
+  152 |         node->value = minimo->value;
+      |                             ^~
+treemap.c:163:45: error: expected ‘;’ before ‘}’ token
+  163 |             hijoMinimo->parent = padreMinimo
+      |                                             ^
+      |                                             ;
+  164 |         }
+      |         ~                                    
+ab0145a

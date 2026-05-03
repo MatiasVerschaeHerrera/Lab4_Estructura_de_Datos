@@ -212,12 +212,13 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     else{
         TreeNode* aux = tree->current->parent;
-        TreeNode* aux2 = minimum(aux);
         while(aux != NULL){
-            if((minimum(aux))->pair->value < aux2->pair->value);
+            if(aux->parent > aux){
+                tree->current = aux;
+                return aux->pair;
+            }
             aux = aux->parent;
         }
-        return aux2->pair;
     }
 }
 

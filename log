@@ -805,3 +805,19 @@ Sun May  3 02:57:56 PM UTC 2026:
  tests:  26|1
 total_score: 50/60
 cbfefc8
+Sun May  3 03:05:52 PM UTC 2026: 
+ treemap.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:237:21: error: initialization of ‘TreeNode *’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+  237 |     TreeNode* aux = searchTreeMap(tree, key);
+      |                     ^~~~~~~~~~~~~
+treemap.c:238:28: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Wincompatible-pointer-types]
+  238 |     if(aux != NULL) return aux;
+      |                            ^~~
+treemap.c:248:12: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Wincompatible-pointer-types]
+  248 |     return aux;
+      |            ^~~
+bb6861c

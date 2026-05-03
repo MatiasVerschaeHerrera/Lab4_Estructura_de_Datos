@@ -69,7 +69,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
         }
         else aux = aux->right;
     }
-return NULL;
+    return NULL;
 }
 
 // 3. Implemente la función void insertTreeMap(TreeMap * tree, void* key, void * value). 
@@ -234,9 +234,18 @@ Pair * nextTreeMap(TreeMap * tree) {
 Pair * upperBound(TreeMap * tree, void* key) {
     if(tree == NULL || tree->root == NULL) return NULL;
 
-    if(searchTreeMap(tree, key) != NULL) return searchTreeMap(tree, key);
+    TreeNode* aux = searchTreeMap(tree, key);
+    if(aux != NULL) return aux;
+    free(aux);
 
-    return NULL;
+    aux = tree->root;
+    while(aux != NULL){
+        if(tree->lower_than(key, aux->pair->key)){
+            aux = aux->left;
+        }
+        else aux = aux->right;
+    }
+    return aux;
 }
 
 

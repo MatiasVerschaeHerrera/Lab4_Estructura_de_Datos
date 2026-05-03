@@ -477,3 +477,22 @@ treemap.c:163:45: error: expected ‘;’ before ‘}’ token
   164 |         }
       |         ~                                    
 0a631a7
+Sun May  3 01:01:10 AM UTC 2026: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:151:13: error: ‘TreeNode’ has no member named ‘key’
+  151 |         node->key = minimo->key;
+      |             ^~
+treemap.c:151:27: error: ‘TreeNode’ has no member named ‘key’
+  151 |         node->key = minimo->key;
+      |                           ^~
+treemap.c:152:13: error: ‘TreeNode’ has no member named ‘value’
+  152 |         node->value = minimo->value;
+      |             ^~
+treemap.c:152:29: error: ‘TreeNode’ has no member named ‘value’
+  152 |         node->value = minimo->value;
+      |                             ^~
+ef3d531
